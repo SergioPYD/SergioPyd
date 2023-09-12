@@ -14,6 +14,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { Spanish } from "./Spanish";
 import { English } from "./English";
 import { useLanguage } from "../context/LanguageContext";
+import ModalContact from "./ModalContact";
 
 export default function NavbarOne() {
   const navigate = useNavigate();
@@ -75,9 +76,10 @@ export default function NavbarOne() {
               {language === "es" ? "SOBRE MÍ" : "ABOUT"}
             </NavLink>
 
-            <NavLink to={"/contact"} className={checkActive} end={true}>
+            <ModalContact/>
+            {/* <NavLink to={"/contact"} className={checkActive} end={true}>
               {language === "es" ? "CONTACTA" : "CONTACT"}
-            </NavLink>
+            </NavLink> */}
           </NavbarItem>{" "}
           <NavbarItem style={{ height: "40px", display: "flex", alignItems: "center" }}>
             
@@ -112,7 +114,7 @@ export default function NavbarOne() {
                 )
               }
               onChange={handleLanguageToggle}
-              className="pt-10"
+              className="pt-16"
              />
           </NavbarMenuItem>
           <NavbarMenuItem className="flex flex-col gap-8 pt-10 ">
@@ -143,15 +145,7 @@ export default function NavbarOne() {
             >
               {language === "es" ? "Sobre Mi" : "About"}
             </NavLink>
-            <NavLink
-              onClick={(e) => {
-                e.preventDefault();
-                setIsMenuOpen(false);
-                navigate("/contact");
-              }}
-            >
-              {language === "es" ? "Contacta" : "Contact"}
-            </NavLink>
+            <ModalContact/>
           </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
