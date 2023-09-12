@@ -11,19 +11,24 @@ import Proyects from "./pages/Proyects"
 
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [language, setLanguage] = useState('es'); 
+  const toggleLanguage = () => {
+    
+    const newLanguage = language === 'es' ? 'en' : 'es';
+    setLanguage(newLanguage);
+  };
+  
   return (
     <div>
       <NavbarOne />
 
-      <h1 className="text-3xl font-bold underline">Bienvenidos a mi Página</h1>
+      
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home  />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/proyects" element={<Proyects />} />
+        <Route path="/contact" element={<Contact  />} />
+        <Route path="/proyects" element={<Proyects  />} />
        
       </Routes>
     </div>

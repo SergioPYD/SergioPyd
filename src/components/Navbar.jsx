@@ -6,73 +6,156 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarItem,
-  Link,
-  Button,
+  Switch,
 } from "@nextui-org/react";
 import { useState } from "react";
 import LogoImg from "../assets/Logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Spanish } from "./Spanish";
+import { English } from "./English";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function NavbarOne() {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
 
- 
+  const handleLanguageToggle = () => {
+    toggleLanguage();
+  };
+
+  const checkActive = (info) => {
+    if (info.isActive) {
+      return "linkActive";
+    } else {
+      return "Navbar";
+    }
+  };
+
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent className="flex justify-center">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-        <NavbarBrand className="flex justify-center">
-          <NavLink to={"/"}>
-            {" "}
-            <img src={LogoImg} alt="page-logo" width={200} />
-          </NavLink>
-        </NavbarBrand>
-      </NavbarContent>
+    <nav>
+      <Navbar
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+        className="mb-4"
+      >
+        <NavbarContent justify="start">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className="sm:hidden flex pr-8"
+            style={{ color: "blue" }}
+          />
+          <NavbarBrand justify="center">
+            <NavLink to={"/"}>
+              {" "}
+              <img
+                style={{ display: "flex", textAlign: "center" }}
+                src={LogoImg}
+                alt="page-logo"
+                width={200}
+              />
+            </NavLink>
+          </NavbarBrand>
+        </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive>
-          <NavLink to={"/"} aria-current="page">
-            HOME
-          </NavLink>
-        </NavbarItem>
-        <NavbarItem>
-          <NavLink color="foreground" to={"/proyects"} >
-            Proyectos
-          </NavLink>
-        </NavbarItem>
-        <NavbarItem>
-          <NavLink color="foreground" to={"/about"} >
-            Sobre Mí
-          </NavLink>
-        </NavbarItem>
-        <NavbarItem>
-          <NavLink color="foreground" to={"/contact"}>
-            Contacta
-          </NavLink>
-        </NavbarItem>{" "}
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex"></NavbarItem>
-      </NavbarContent>
-      <NavbarMenu>
-        <NavbarMenuItem  className="flex flex-col gap-8 pt-8 ">
-        <NavLink to={"/"} aria-current="page">
-            HOME
-          </NavLink>
-          <NavLink color="foreground" to={"/proyects"} >
-            Proyectos
-          </NavLink>
-          <NavLink color="foreground" to={"/about"} >
-            Sobre Mí
-          </NavLink>
-          <NavLink color="foreground" to={"/contact"}>
-            Contacta
-          </NavLink>
-        </NavbarMenuItem>
-      </NavbarMenu>
-    </Navbar>
+        <NavbarContent
+          justify="end"
+          className="hidden sm:flex gap-4 justify-center"
+        >
+          <NavbarItem isActive className="flex gap-7">
+            <NavLink to={"/"} className={checkActive}>
+              HOME
+            </NavLink>
+
+            <NavLink to={"/proyects"} className={checkActive} end={true}>
+              {language === "es" ? "PROYECTOS" : "PROYECTS"}
+            </NavLink>
+
+            <NavLink to={"/about"} className={checkActive} end={true}>
+              {language === "es" ? "SOBRE MÍ" : "ABOUT"}
+            </NavLink>
+
+            <NavLink to={"/contact"} className={checkActive} end={true}>
+              {language === "es" ? "CONTACTA" : "CONTACT"}
+            </NavLink>
+          </NavbarItem>{" "}
+          <NavbarItem style={{ height: "40px", display: "flex", alignItems: "center" }}>
+            
+            <Switch
+              defaultSelected={language === "es"}
+              size="lg"
+              color="primary"
+              thumbIcon={({ isSelected, className }) =>
+                isSelected ? (
+                  <Spanish className={className} />
+                ) : (
+                  <English className={className} />
+                )
+              }
+              onChange={handleLanguageToggle}
+              className="pl-10"
+             />
+          </NavbarItem>
+        </NavbarContent>
+
+        <NavbarMenu>
+          <NavbarMenuItem style={{ height: "40px", display: "flex", alignItems: "center" }}> 
+          <Switch
+              defaultSelected={language === "es"}
+              size="md"
+              color="primary"
+              thumbIcon={({ isSelected, className }) =>
+                isSelected ? (
+                  <Spanish className={className} />
+                ) : (
+                  <English className={className} />
+                )
+              }
+              onChange={handleLanguageToggle}
+              className="pt-10"
+             />
+          </NavbarMenuItem>
+          <NavbarMenuItem className="flex flex-col gap-8 pt-10 ">
+            <NavLink
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                navigate("/");
+              }}
+            >
+              Home
+            </NavLink>
+            <NavLink
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                navigate("/proyects");
+              }}
+            >
+              {language === "es" ? "Proyectos" : "Proyects"}
+            </NavLink>
+            <NavLink
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                navigate("/about");
+              }}
+            >
+              {language === "es" ? "Sobre Mi" : "About"}
+            </NavLink>
+            <NavLink
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                navigate("/contact");
+              }}
+            >
+              {language === "es" ? "Contacta" : "Contact"}
+            </NavLink>
+          </NavbarMenuItem>
+        </NavbarMenu>
+      </Navbar>
+      <hr className="divider mb-10" />
+    </nav>
   );
 }
