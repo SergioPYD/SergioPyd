@@ -10,7 +10,7 @@ import Finapay from "./pages/Finapay";
 import Topgamesports from "./pages/Topgamesports";
 import La33 from "./pages/La33";
 import Wordpress from "./pages/Wordpress";
-
+import Footer from "./components/Footer";
 
 function App() {
   const [language, setLanguage] = useState('es'); 
@@ -25,7 +25,6 @@ function App() {
       <NavbarOne />
 
       
-
       <Routes>
         <Route path="/" element={<Home  />} />
         <Route path="/about" element={<About />} />
@@ -36,6 +35,7 @@ function App() {
         <Route path="/proyects/la33" element={<La33 />} />
         <Route path="/proyects/wordpress" element={<Wordpress />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

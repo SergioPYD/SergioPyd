@@ -6,6 +6,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarItem,
+  Divider,
   Switch,
 } from "@nextui-org/react";
 import { useState } from "react";
@@ -15,6 +16,7 @@ import { Spanish } from "./Spanish";
 import { English } from "./English";
 import { useLanguage } from "../context/LanguageContext";
 import ModalContact from "./ModalContact";
+import Footer from "./Footer";
 
 export default function NavbarOne() {
   const navigate = useNavigate();
@@ -40,13 +42,13 @@ export default function NavbarOne() {
         onMenuOpenChange={setIsMenuOpen}
         className="mb-4"
       >
-        <NavbarContent justify="start">
+        <NavbarContent justify="start" >
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="sm:hidden flex pr-8"
-            style={{ color: "blue" }}
+            className="sm:hidden flex"
+            style={{ color: "darkblue" }}
           />
-          <NavbarBrand justify="center">
+          <NavbarBrand  justify="center">
             <NavLink onClick={(e) => {
                 e.preventDefault();
                 setIsMenuOpen(false);
@@ -121,13 +123,14 @@ export default function NavbarOne() {
               className="pt-16"
              />
           </NavbarMenuItem>
-          <NavbarMenuItem className="flex flex-col gap-8 pt-10 ">
+          <NavbarMenuItem className="flex flex-col gap-8 pt-10 movNav">
             <NavLink
               onClick={(e) => {
                 e.preventDefault();
                 setIsMenuOpen(false);
                 navigate("/");
               }}
+             
             >
               Home
             </NavLink>
@@ -150,6 +153,11 @@ export default function NavbarOne() {
               {language === "es" ? "Sobre Mi" : "About"}
             </NavLink>
             <ModalContact/>
+            <div style={{marginTop:"280px"}}>
+            <Divider/>
+          <Footer/>
+
+          </div>
           </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>

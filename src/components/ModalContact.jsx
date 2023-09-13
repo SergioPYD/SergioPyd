@@ -16,7 +16,7 @@ export default function ModalContact() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
     <>
-      <NavLink to="#" onClick={onOpen} className="Navbar">
+      <NavLink to="#" onClick={onOpen} id="link">
         {language === "es" ? "CONTACTO" : "CONTACT"}
       </NavLink>
       <Modal

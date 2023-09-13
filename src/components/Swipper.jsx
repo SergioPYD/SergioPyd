@@ -30,10 +30,10 @@ export default function Swipper() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <Image  isBlurred  src={elrinconPic} />
+          <Image isBlurred src={camalaPic} />
         </SwiperSlide>
         <SwiperSlide>
-          <Image isBlurred src={camalaPic} />
+          <Image  isBlurred  src={elrinconPic} />
         </SwiperSlide>
         <SwiperSlide>
           <Image isBlurred src={realPic} />

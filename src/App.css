@@ -31,13 +31,13 @@
 .link{
   color: blue;
 }
+#link{
+  color: blue;
+}
 
-
-
-/* .swiper {
-  width: 100%;
-  height: 100%;
-} */
+.movNav a {
+  color: darkblue
+}
 
 .swiper-slide {
   text-align: center;
@@ -57,4 +57,7 @@
   object-fit: cover;
 }
 
-
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+}
