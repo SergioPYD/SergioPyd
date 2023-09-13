@@ -2,10 +2,10 @@ import { useLanguage } from "../context/LanguageContext";
 import { Image } from "@nextui-org/react";
 import profilePic from "../assets/ProfilePic1.jpg";
 import profilePic2 from "../assets/ProfilePic2.jpg";
-import { useNavigate } from "react-router-dom";
+
 
 export default function About() {
-  const navigate = useNavigate();
+ 
   const { language } = useLanguage();
 
   return (

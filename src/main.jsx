@@ -5,6 +5,8 @@ import "./index.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { BrowserRouter } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext.jsx";
+import 'atropos/css'
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <LanguageProvider>

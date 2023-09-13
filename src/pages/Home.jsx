@@ -1,7 +1,10 @@
 import { useLanguage } from "../context/LanguageContext";
 import { Button, Image } from "@nextui-org/react";
-import profilePic from "../assets/ProfilePic.jpg";
 import { useNavigate } from "react-router-dom";
+import Atropos from "atropos/react";
+
+import profilePic from "../assets/ProfilePic.jpg";
+
 
 export default function Home() {
   const navigate = useNavigate();
@@ -13,13 +16,16 @@ export default function Home() {
         {language === "es" ? "¡BIENVENID@ A MI WEB!" : " WELCOME TO MY WEB"}
       </h1>
       <div className="flex flex-wrap justify-center ">
+      <Atropos className="my-atropos"  activeOffset={40}
+        shadowScale={1.05}>
         <Image
           isBlurred
-          isZoomed
+          
           width={600}
           src={profilePic}
           alt="ProfilePic"
         />
+        </Atropos>
         <div style={{ width: "500px" }}>
           <p className="flex items-start pl-10 pt-6 sm: pl-2 pt-3">
             {language === "es"
@@ -56,6 +62,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+ 
+      
+      
+     
     </div>
   );
 }

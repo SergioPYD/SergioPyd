@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Proyects from "./pages/Proyects"
+import Finapay from "./pages/Finapay";
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/about" element={<About />} />
         
         <Route path="/proyects" element={<Proyects  />} />
+        <Route path="/proyects/finapay" element={<Finapay />} />
        
       </Routes>
     </div>
