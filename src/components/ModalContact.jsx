@@ -104,6 +104,7 @@ export default function ModalContact() {
                             href="https://www.linkedin.com/in/sergio-puyod/"
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="link"
                           >
                             here
                           </a>

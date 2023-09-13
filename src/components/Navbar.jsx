@@ -47,7 +47,11 @@ export default function NavbarOne() {
             style={{ color: "blue" }}
           />
           <NavbarBrand justify="center">
-            <NavLink to={"/"}>
+            <NavLink onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+                navigate("/");
+              }}>
               {" "}
               <img
                 style={{ display: "flex", textAlign: "center" }}

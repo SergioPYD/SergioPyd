@@ -7,7 +7,9 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Proyects from "./pages/Proyects"
 import Finapay from "./pages/Finapay";
-
+import Topgamesports from "./pages/Topgamesports";
+import La33 from "./pages/La33";
+import Wordpress from "./pages/Wordpress";
 
 
 function App() {
@@ -30,7 +32,9 @@ function App() {
         
         <Route path="/proyects" element={<Proyects  />} />
         <Route path="/proyects/finapay" element={<Finapay />} />
-       
+        <Route path="/proyects/topgamesports" element={<Topgamesports />} />
+        <Route path="/proyects/la33" element={<La33 />} />
+        <Route path="/proyects/wordpress" element={<Wordpress />} />
       </Routes>
     </div>
   );
