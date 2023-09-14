@@ -6,45 +6,48 @@
 }
 
 .linkActive {
-   text-decoration:overline;
+  text-decoration: overline;
   font-weight: bold;
   font-size: 1.2rem;
-  color:darkblue
+  color: darkblue;
 }
-.linkActive:hover{
-  color:aqua;
+.linkActive:hover {
+  color: aqua;
 }
 
 .Navbar {
-  color:blue
+  color: darkblue;
 }
 .Navbar:hover {
-  color:aqua
+  color: aqua;
 }
 
 .divider {
   border: none;
   height: 2px;
-  background-color: darkblue; /* Cambia este valor al color que desees */
+  background-color: darkblue;
+}
+.dividerOne {
+  border: none;
+  height: 1px;
+  background-color: darkblue;
 }
 
-.link{
+.link {
   color: blue;
 }
-#link{
+#link {
   color: blue;
 }
 
 .movNav a {
-  color: darkblue
+  color: darkblue;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +60,11 @@
   object-fit: cover;
 }
 
-.reduce-motion * {
-  animation: none !important;
-  transition: none !important;
+h1 {
+  font-weight: 300;
+  font-size: 40px;
+  color: blue;
+}
+p{
+  color: darkblue;
 }

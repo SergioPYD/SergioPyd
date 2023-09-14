@@ -26,7 +26,7 @@ export default function About() {
                 alt="ProfilePic"
               />
       </div>
-      <hr className="mt-10 mb-10"/>
+      <hr className="mt-10 mb-10 divider"/>
       <div className="flex flex-wrap justify-center items-center ">
         <Image
           isBlurred

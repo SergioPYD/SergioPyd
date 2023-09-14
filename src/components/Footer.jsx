@@ -2,16 +2,16 @@ export default function Footer() {
   return (
     <>
       <div>
-        
+      <hr className="mt-10 mb-10 dividerOne"/>
       </div>
-      <div className="flex flex-row justify-center" style={{ marginTop: "100px", marginBottom: "20px" }}>
+      <div className="flex flex-row justify-center" style={{ marginTop: "80px", marginBottom: "20px" }}>
         <div className="flex flex-col items-center gap-2">
           <b className="text-small text-default-500">SERGIO PUYOD</b>
           <div className="flex flex-row gap-2">
             <a href="https://www.linkedin.com/in/sergio-puyod/" target="_blank">
               <svg
-                width="25"
-                height="25"
+                width="30"
+                height="30"
                 viewBox="0 0 256 256"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -27,8 +27,8 @@ export default function Footer() {
             </a>
             <a href="https://github.com/SergioPYD" target="_blank">
               <svg
-                width="25"
-                height="25"
+                width="30"
+                height="30"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >

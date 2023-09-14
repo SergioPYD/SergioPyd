@@ -1,5 +1,5 @@
 import Atropos from "atropos/react";
-import { Card, Button, CardFooter } from "@nextui-org/react";
+import { Card, Button, CardFooter, Link } from "@nextui-org/react";
 import { useLanguage } from "../context/LanguageContext";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
@@ -68,9 +68,11 @@ export default function Proyects() {
               <WordpressIco />
             </div>
             <Button
+              as={Link}
               color="primary"
               variant="ghost"
-              onPress={() => navigate("/proyects/wordpress")}
+              href="https://www.elrincondesergio.es/"
+              isExternal
             >
               {language === "es" ? "Ver más" : "See more"}
             </Button>

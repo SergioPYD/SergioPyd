@@ -153,8 +153,8 @@ export default function NavbarOne() {
               {language === "es" ? "Sobre Mi" : "About"}
             </NavLink>
             <ModalContact/>
-            <div style={{marginTop:"280px"}}>
-            <Divider/>
+            <div style={{marginTop:"180px"}}>
+           
           <Footer/>
 
           </div>
