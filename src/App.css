@@ -12,32 +12,32 @@
   color: darkblue;
 }
 .linkActive:hover {
-  color: aqua;
+  color: #0070F0;
 }
 
 .Navbar {
   color: darkblue;
 }
 .Navbar:hover {
-  color: aqua;
+  color: #0070F0;
 }
 
 .divider {
   border: none;
-  height: 2px;
+  height: 1px;
   background-color: darkblue;
 }
 .dividerOne {
   border: none;
-  height: 1px;
+  height: 2px;
   background-color: darkblue;
 }
 
 .link {
-  color: blue;
+  color: #0070F0;
 }
 #link {
-  color: blue;
+  color: #0070F0;
 }
 
 .movNav a {
@@ -61,10 +61,9 @@
 }
 
 h1 {
-  font-weight: 300;
-  font-size: 40px;
-  color: blue;
+  color:#0070F0;
 }
 p{
   color: darkblue;
+  font-size: 1.1rem;;
 }

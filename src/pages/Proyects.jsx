@@ -73,8 +73,9 @@ export default function Proyects() {
               variant="ghost"
               href="https://www.elrincondesergio.es/"
               isExternal
+              className="p-1"
             >
-              {language === "es" ? "Ver más" : "See more"}
+              {language === "es" ? "Ver más" : "See more..."}
             </Button>
           </CardFooter>
         </Card>

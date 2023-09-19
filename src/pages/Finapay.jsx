@@ -51,6 +51,7 @@ export default function Finapay() {
             <Image src={finapayPic2} />
           </SwiperSlide>
         </Swiper>
+        
       </div>
       <div className="mt-10 flex gap-4">
         <FinapayIco />

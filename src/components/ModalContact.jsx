@@ -116,7 +116,7 @@ export default function ModalContact() {
               </ModalBody>
               <ModalFooter className="flex justify-center">
                 <Button color="danger" variant="ghost" onPress={onClose}>
-                  Close
+                  {language === "es" ? "Cerrar" : "Close"}
                 </Button>
               </ModalFooter>
             </>
