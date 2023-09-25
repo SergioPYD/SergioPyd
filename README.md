@@ -1,1 +1,5 @@
-Mi perfil
+Me llamo Sergio. Soy graduado en Economía por la Universidad de Zaragoza y trabajé durante cinco años en una empresa en España, donde ascendí a gerente, supervisando múltiples locales en todo el país. Además, diseñé páginas web con WordPress para comercios locales. Mi pasión por la tecnología me llevó a cambiar mi carrera hacia el desarrollo web, tanto en la parte de Frontend como en el Backend, mostrando mi adaptabilidad y deseo de aprender. Mi perfil combina habilidades de liderazgo, gestión empresarial y desarrollo web.
+
+--------------------------------------------------------------------
+
+My name is Sergio. I hold a degree in Economics from the University of Zaragoza and worked for five years in a Spanish company, where I rose to the position of manager, overseeing multiple locations nationwide. Additionally, I designed websites using WordPress for local businesses. My passion for technology led me to make a career change into web development, both on the Frontend and Backend, demonstrating my adaptability and eagerness to learn. My profile combines leadership skills, business management, and web development expertise.
