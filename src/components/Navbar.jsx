@@ -75,7 +75,7 @@ export default function NavbarOne() {
             </NavLink>
 
             <NavLink to={"/proyects"} className={checkActive} end={true}>
-              {language === "es" ? "PROYECTOS" : "PROYECTS"}
+              {language === "es" ? "PROYECTOS" : "PROJECTS"}
             </NavLink>
 
             <NavLink to={"/about"} className={checkActive} end={true}>
