@@ -18,7 +18,7 @@ export default function Topgamesports() {
   return (
     <div className="flex flex-col items-center max-w-2xl mx-auto">
       <div className="my-10">
-        <Link href="https://topgamesports.adaptable.app/" isExternal>
+        <Link href="https://topgamesport.adaptable.app/" isExternal>
           <Image isBlurred src={topLogo} width={300} />
         </Link>
       </div>
@@ -129,7 +129,7 @@ export default function Topgamesports() {
                 />
               </svg>
             }
-            href="https://topgamesports.adaptable.app/"
+            href="https://topgamesport.adaptable.app/"
             isExternal
             color="secondary"
           >
