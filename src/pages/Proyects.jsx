@@ -71,7 +71,7 @@ export default function Proyects() {
               as={Link}
               color="primary"
               variant="ghost"
-              href="https://www.elrincondesergio.es/"
+              href="https://elrincondesergio.netlify.app/"
               isExternal
               className="p-1"
             >
