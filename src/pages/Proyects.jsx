@@ -6,8 +6,11 @@ import { useMediaQuery } from 'react-responsive';
 
 
 
+
 import Swipper from "../components/Swipper";
+import SwipperTwo from "../components/SwipperTwo";
 import WordpressIco from "../components/SVG/WordpressIco";
+import WhoFirst from "../components/SVG/WhoFirst";
 import FinapayCard from "../components/FinapayCard";
 import TopgameCard from "../components/TopgameCard";
 import GameCard from "../components/GameCard";
@@ -59,11 +62,11 @@ export default function Proyects() {
       )}
       </div>
       {/* WORDPRESS */}
-      <div className="flex justify-center flex-wrap h-max">
+      <div className="flex justify-center flex-wrap h-max gap-6">
       <Atropos className="my-atropos" activeOffset={40} shadowScale={1.05}>
         <Card className="max-w-xl	">
           <Swipper />
-          <CardFooter className="flex justify-around">
+          <CardFooter className="flex justify-center gap-10">
             <div className="flex gap-4">
               <WordpressIco />
             </div>
@@ -72,6 +75,26 @@ export default function Proyects() {
               color="primary"
               variant="ghost"
               href="https://elrincondesergio.netlify.app/"
+              isExternal
+              className="p-1"
+            >
+              {language === "es" ? "Ver más" : "See more..."}
+            </Button>
+          </CardFooter>
+        </Card>
+        </Atropos>
+      <Atropos className="my-atropos" activeOffset={40} shadowScale={1.05}>
+        <Card className="max-w-xl	">
+          <SwipperTwo />
+          <CardFooter className="flex justify-center gap-10">
+            <div className="flex gap-4 ">
+              <WhoFirst />
+            </div>
+            <Button
+              as={Link}
+              color="primary"
+              variant="ghost"
+              href="https://quienesprimero.netlify.app/"
               isExternal
               className="p-1"
             >
